@@ -1,5 +1,5 @@
 """
-author = Simona Menšíková
+author = 
 
 """
 TEXTS = ["""
