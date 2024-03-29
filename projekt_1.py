@@ -7,6 +7,7 @@ discord: mensikxs@gmail.com
 
 """
 import string
+
 from task_template import TEXTS as text
 
 separator = 40 * "-"
