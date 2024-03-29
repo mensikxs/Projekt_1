@@ -27,7 +27,6 @@ password = input("Enter password: ")
 
 # 1) username and password are correct (registered user):
 if logins.get(name) == password:
-    
     print(separator)
 
     # welcome and give options:
@@ -37,14 +36,12 @@ if logins.get(name) == password:
         f"We have {available_text} texts to be analysed.",
         sep= "\n"
     )
-    
     print(separator)
 
     # choosing text:
     number = input(
         f"Enter a number btw. 1 and {available_text} to select: "
         )
-    
     print(separator)
 
     # different situations when choosing text:
