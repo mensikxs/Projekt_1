@@ -98,6 +98,13 @@ word_length = list(map(len, clean_text))
 frequency = []
 for value in range(min(word_length), max(word_length) + 1):
     frequency.append(word_length.count(value))
+
+print(
+    "LEN|",
+    "OCCURENCES".center(max(frequency)),
+    "|NR.",
+)
+print(separator)
     
 for index, value in enumerate(frequency, 1):
     print(
