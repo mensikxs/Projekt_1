@@ -108,6 +108,6 @@ print(separator)
     
 for index, value in enumerate(frequency, 1):
     print(
-    f"{index:>2}.| {value * "*"}{(max(frequency)-value) * " "} |{value}"
+    f"{index: >2}.| {value * "*"}{(max(frequency)-value) * " "} |{value}"
     )
 sys.exit()
