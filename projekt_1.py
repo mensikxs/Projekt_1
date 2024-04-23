@@ -26,7 +26,7 @@ password = input("Enter password: ")
 
 # 1) wrong username or password:
 
-if not logins.get(name):
+if name not in logins:
     print("Unregistered user, terminating the program..")
     sys.exit()
 
@@ -42,7 +42,7 @@ available_text = len(text)
 print(
     f"Welcome to the app, {name}!",
     f"We have {available_text} texts to be analysed.",
-    sep= "\n"
+    sep="\n"
 )
 print(separator)
 
@@ -75,14 +75,18 @@ word_length = []
 
 for word in text[int(number)-1].split():
     count += 1
-    if word[0].isupper(): titlecase += 1
-    if word.isupper() and word.isalpha(): upper += 1
-    if word.islower(): lower += 1
-    if word.isnumeric(): numeric.append(int(word))
+    if word[0].isupper():
+        titlecase += 1
+    if word.isupper() and word.isalpha():
+        upper += 1
+    if word.islower():
+        lower += 1
+    if word.isnumeric():
+        numeric.append(int(word))
     clean_text.append(word.strip(".,;:"))
 
 print(
-f"""There are {count} words in the selected text.
+    f"""There are {count} words in the selected text.
 There are {titlecase} titlecase words.
 There are {upper} uppercase words.
 There are {lower} lowercase words. 
@@ -105,9 +109,8 @@ print(
     "|NR.",
 )
 print(separator)
-    
+
 for index, value in enumerate(frequency, 1):
     print(
-    f"{index: >2}.| {value * "*"}{(max(frequency)-value) * " "} |{value}"
+        f"{index: >2}.| {value * "*"}{(max(frequency)-value) * " "} |{value}"
     )
-sys.exit()
